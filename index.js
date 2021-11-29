@@ -1,36 +1,38 @@
 // Write your solution here!
-const cats = ["Milo", "Otis", "Garfield"];
+
+
+const cats = ["Milo", "Otis", "Garfield"]
 
 function destructivelyAppendCat(name) {
-    console.log("Name:", name)
-    cats.push("Ralph");
+    cats.push("Ralph")
 }
 
 function destructivelyPrependCat(name) {
-    console.log("Name:", name)
-    cats.unshift("Bob");
+    cats.unshift("Bob")
 }
 
-function destructivelyRemoveLastCat(name) {
+function destructivelyRemoveLastCat(name){
     cats.pop();
 }
 
-function destructivelyRemoveFirstCat(name) {
+function destructivelyRemoveFirstCat(name){
     cats.shift();
 }
-//NOTE: need RETURN when creating new array
-function appendCat(name) {
-   return  [...cats, name]
+
+function appendCat(name){
+return [...cats, name]     //NOTE: need RETURN when creating new array
 }
 
-function prependCat(name) {
-    return  [name, ...cats]
- }
+function prependCat(name){
+    return [name, ...cats]
+    }
 
- function removeLastCat(name) {
-  return cats.slice(0, cats.length-1);
- }
+//removes the last cat in the cats array and returns a new array, leaving the cats array unchanged
+function removeLastCat(){
+    return cats.slice(0, cats.length-1);
+}
 
- function removeFirstCat(name) {
+//removes the first cat from the cats array and returns a new array, leaving the cats array unchanged
+function removeFirstCat(name) {
     return cats.slice(1);
-   }
+}
